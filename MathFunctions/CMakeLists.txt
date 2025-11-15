@@ -8,5 +8,9 @@ if(USE_MYMATH)
 
   add_library(SqrtLibrary STATIC mysqrt.cxx)
 
+  target_link_libraries(SqrtLibrary PUBLIC tutorial_compiler_flags)
+
   target_link_libraries(MathFunctions PRIVATE SqrtLibrary)
 endif()
+
+target_link_libraries(MathFunctions PUBLIC tutorial_compiler_flags)
