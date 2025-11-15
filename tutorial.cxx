@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "TutorialConfig.h"
+#include "MathFunctions.h"
 
 int main(int argc, char *argv[])
 {
@@ -12,7 +13,7 @@ int main(int argc, char *argv[])
     return 1;
   }
   const double inputValue = std::stod(argv[1]);
-  const double outputValue = sqrt(inputValue);
+  const double outputValue = mathfunctions::sqrt(inputValue);
   std::cout << "The square root of " << inputValue << " is " << outputValue
             << std::endl;
   return 0;
